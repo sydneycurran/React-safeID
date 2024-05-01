@@ -1,0 +1,47 @@
+{
+  "id": {
+    "allergies": [
+      "Dairy",
+      "Eggs",
+      "Fish"
+    ]
+  },
+  "food": {
+    "allergies": [
+      "Dairy",
+      "Gluten",
+      "Nuts"
+    ]
+  },
+  "other-all": {
+    "allergies": [
+      "Latex",
+      "Medications"
+    ]
+  },
+  "medical-conditions": {
+    "conditions": [
+      "Autoimmune",
+      "Diabetes",
+      "Heart",
+      "Hypertension",
+      "IBS"
+    ]
+  },
+  "other-health": {
+    "info": [
+      "EpiPen",
+      "Insulin",
+      "Service Dog"
+    ]
+  },
+  "medications": {
+    "meds": "Toprol, Antihistamine"
+  },
+  "personal-info": {
+    "name": "John Bon Doevi",
+    "DOB": "2/3/1962",
+    "height": "169cm",
+    "weight": "85kg"
+  }
+}

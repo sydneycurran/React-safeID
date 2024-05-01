@@ -1,0 +1,24 @@
+{
+    "id": {
+        "hello": "3"
+    },
+    "food": {
+        "allergies": ["Dairy", "Eggs", "Fish", 
+                    "Gluten", "Peanuts","Sesame", 
+                    "Shellfish", "Soy", "Tree Nuts"]
+    },
+    "other-all": {
+        "allergies": ["-Cilin Antibiotics", "Bee and Insect Stings",
+                        "Latex", "Other Medications"]
+    },
+    "medical-conditions": {
+        "conditions": ["Arthritis", "Asthma", "Autoimmune Disorder",
+                        "Diabetes", "Epilepsy", "Heart Disease",
+                        "Hypertension", "Irritable Bowel Syndrome",
+                        "Kidney Disease"]
+    },
+    "other-health": {
+        "info": ["Carries Epi-Pen", "Carries Inhaler", 
+                    "Carries Inhaler", "Service Dog"]
+    }
+}

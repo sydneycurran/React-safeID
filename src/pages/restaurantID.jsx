@@ -31,7 +31,7 @@ const RestaurantID = () => {
 									<IDEntry name={item} translateTo="spanish" />)}
 							</div>
 							<div id="card-button">
-								<button onClick={() => handleFlip()} id="translate-button">See Translation</button>
+								<button onClick={() => handleFlip()} id="allergy-translate-button">See English</button>
 							</div>
 							<div id="card-pad" />
 						</div>
@@ -43,7 +43,7 @@ const RestaurantID = () => {
 									<IDEntry name={item}/>)}
 							</div>
 							<div id="card-button">
-								<button onClick={() => handleFlip()} id="translate-button">See Translation</button>
+								<button onClick={() => handleFlip()} id="allergy-translate-button">See Translation</button>
 							</div>
 							<div id="card-pad" />
 						</div>

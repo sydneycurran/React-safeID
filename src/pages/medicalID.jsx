@@ -49,7 +49,7 @@ const MedicalID = () => {
 				<div className="header">
 					<h1>Medical ID</h1>
 				</div>
-				<ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
+				<ReactCardFlip isFlipped={isFlipped} flipDirection="vertical" id="medical">
 					<div className="flip-card">
 						<div id="medical" className="flip-card-front">
 							<PersonalInfo info={personalInfo} />

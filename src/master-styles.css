@@ -1,7 +1,4 @@
-body {
-    text-align: center;
-    font-family: Verdana, sans-serif;
-  }
+
   
   .flip-card {
     position: top;
@@ -20,17 +17,17 @@ body {
   }
   
   .flip-card-front {
-    background-color: #bbb;
-    color: black;
+    background-color: #04B0C3;
+    color: white;
   }
   
   .flip-card-back {
-    background-color: #2980b9;
+    background-color: #04B0C3;
     color: white;
   }
   
   #medical {
-    background-color: red;
+    background-color: #D6183B;
     color: white;
   }
   
@@ -41,7 +38,7 @@ body {
     padding: 3px;
     margin: 5px;
     border-radius: 15px; /* Rounded corners for the card effect */
-    background-color: #333; /* Dark gray for the menu item cards */
+    background-color: #1a1a1a; /* Dark gray for the menu item cards */
     color: rgb(255, 255, 255); /* Light gray text for readability */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
   }
@@ -54,7 +51,7 @@ body {
     padding: 5px;
     margin: 5px;
     border-radius: 5px; /* Rounded corners for the card effect */
-    background-color: rgb(153, 0, 0); /* Dark gray for the menu item cards */
+    background-color: #8C0428; /* Dark gray for the menu item cards */
     color: rgb(255, 255, 255); /* Light gray text for readability */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     height: 15px;
@@ -71,7 +68,8 @@ body {
   .entry h1 {
   
     padding: 0px;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: normal;
   }
   
   .entry p {
@@ -106,10 +104,11 @@ body {
   body {
     margin: 5px;
     padding: 0;
-    font-family: 'Helvetica', sans-serif;
+    font-family: Verdana, sans-serif;
     background-color: #000; /* Light background for the overall page */
     overflow: auto;
     color: #d0d0d0;
+    text-align: center;
     
   }
   .header {
@@ -205,18 +204,18 @@ body {
     text-decoration: none;
   }
   a:hover {
-    color: red;
+    color: #D6183B;
     background-color: transparent;
     text-decoration: underline;
   }
   .get-help {
-    border: 2px solid #8B0000; /* Dark red border */
-    background-color: #df072b; /* Light red background */
+    border: 2px solid #8C0428; /* Dark red border */
+    background-color: #D6183B; /* Light red background */
     transition: background-color 0.3s; /* Smooth transition for hover effect */
   }
   /* Hover effect for Get Help button */
   .get-help:hover {
-    background-color: #d82e4a; /* Slightly lighter red for hover */
+    background-color: #D6183B; /* Slightly lighter red for hover */
   }
   .user-info {
     font-size: 14px; /* Smaller font size for subtlety */
@@ -231,10 +230,6 @@ body {
     color: rgb(158, 158, 158); /* Lighter color for less emphasis */
     margin-top: -10px; /* Adds a little space between this and page header */
     text-align: left; /* Centers the text under the page header */
-  }
-  
-  .active p {
-    color: #197bd6; /* Light blue color for the text */
   }
   
   .info-label {
@@ -344,8 +339,8 @@ body {
     align-items: center;
     justify-content: center;
     justify-items: center;
-    margin-top: -15px;
-    margin-bottom: -25px;
+    margin-top: -5px;
+    margin-bottom: -15px;
 }
 .info-list {
     display: grid;
@@ -363,15 +358,31 @@ body {
     height: 85px;
 }
 
-#translate-button {
-  
-  
-  background-color: #04AA6D;  
+#allergy-translate-button {
+  background-color: #077386;  
   border: none; 
   color: white;
   text-decoration: none; 
-  font-size: 20px;
+  font-size: 14px;
   border-radius: 30px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: inherit;
+  font-weight: bold;
+
+}
+
+#translate-button {
+  background-color: #8C0428;  
+  border: none; 
+  color: white;
+  text-decoration: none; 
+  font-size: 14px;
+  border-radius: 30px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-family: inherit;
   font-weight: bold;
 
@@ -379,7 +390,7 @@ body {
 
 #card-button {
   height: 40px;
-  background-color: bisque;
+  background-color: black;
   width: 100%;
   position: fixed;
   bottom: -5px;
@@ -436,7 +447,7 @@ background-color: #ccc; /* Slightly darker on hover */
 }
 
 .checkbox input:checked ~ .checkmark {
-background-color: #2196F3; /* Blue background when checked */
+background-color: #D6183B; /* Blue background when checked */
 }
 
 .checkmark:after {
@@ -515,28 +526,6 @@ width: calc(100% - 100px); /* Reduced width by additional 40px */
 margin-left: 40px; /* Added margin to push dropdown to the right */
 }
 
-.bottom-menu {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #1a1a1a;
-    color: #ccc;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-}
-.bottom-menu div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.bottom-menu img {
-    width: 30px;
-    height: 30px;
-}
-.not-active-icon {
-    filter: brightness(0) invert(1);
-}
 }
 
 .rounded-input {
@@ -553,7 +542,7 @@ margin-left: 40px; /* Added margin to push dropdown to the right */
 }
 
 .emergency-title {
-  color: #D6183B; /* Dark red color for emergency title */
+  color: #8C0428; /* Dark red color for emergency title */
   margin-top: 20px;
   font-size: 23px;
   margin-bottom: 7px;
@@ -568,7 +557,7 @@ margin-left: 40px; /* Added margin to push dropdown to the right */
 }
 
 .call-button {
-  background-color: #8B0000; /* Dark red background color */
+  background-color: #8C0428; /* Dark red background color */
   color: #fff;
   border: none;
   padding: 10px 40px;
@@ -579,7 +568,7 @@ margin-left: 40px; /* Added margin to push dropdown to the right */
 }
 
 .call-button:hover {
-  background-color: #df072b; /* Light red background color on hover */
+  background-color: #D6183B; /* Light red background color on hover */
 }
   
 .home-icon {
@@ -591,5 +580,25 @@ margin-left: 40px; /* Added margin to push dropdown to the right */
   width: auto;
   position: absolute;
   right: 2vw;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1a1a1a;
 }
   

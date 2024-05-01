@@ -65,8 +65,7 @@ const More = () => {
 							<span
 								className="info-icon"
 								data-tooltip="Automatically install updates"
-							>
-								i
+							>i
 							</span>
 							<label className="checkbox">
 								<input type="checkbox" defaultChecked="checked" />

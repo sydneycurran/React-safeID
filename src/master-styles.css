@@ -464,17 +464,18 @@ cursor: pointer;
 
 .info-icon {
     display: inline-block;
-    width: 12px;
-    height: 12px;
-    line-height:12px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
     border-radius: 50%;
     background-color: #333;
     color: #fff;
     text-align: center;
-    font-style: italic;
-    font-size: 8px;
+    /* font-style: italic; */
+    font-size: 24px;
     cursor: pointer;
     position: absolute;
+    align-self: baseline;
     left: 155px;
 }
 

@@ -31,13 +31,14 @@ body {
   
   #medical {
     background-color: red;
+    color: white;
   }
   
   .entry {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 5px;
+    padding: 3px;
     margin: 5px;
     border-radius: 15px; /* Rounded corners for the card effect */
     background-color: #333; /* Dark gray for the menu item cards */
@@ -70,12 +71,12 @@ body {
   .entry h1 {
   
     padding: 0px;
-    font-size: 20px;
+    font-size: 16px;
   }
   
   .entry p {
     padding: 2px;
-    font-size: 20px;
+    font-size: 14px;
   }
   
   /* .entry img {
@@ -583,5 +584,12 @@ margin-left: 40px; /* Added margin to push dropdown to the right */
   
 .home-icon {
   margin-right: 10px;
+}
+
+.entry-info-button {
+  height: 20px;
+  width: auto;
+  position: absolute;
+  right: 2vw;
 }
   

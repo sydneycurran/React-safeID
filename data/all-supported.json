@@ -18,7 +18,7 @@
                         "Kidney Disease"]
     },
     "other-health": {
-        "info": ["Carries Epi-Pen", "Carries Inhaler", 
+        "info": ["Carries Epi-Pen", "Carries Insulin", 
                     "Carries Inhaler", "Service Dog"]
     }
 }

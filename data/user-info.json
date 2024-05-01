@@ -31,6 +31,7 @@
   "other-health": {
     "info": [
       "EpiPen",
+      "Inhaler",
       "Insulin",
       "Service Dog"
     ]

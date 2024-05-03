@@ -28,20 +28,20 @@ const Home = () => {
 				</div>
 				<NavLink to='/rest-id'>
 					<div id="restaruantid" className="menu-item" onclick="">
-					<FontAwesomeIcon icon={faUtensils} size="xl" className="home-icon" color="#04B0C3"/>
+					<FontAwesomeIcon icon={faUtensils} size="2xl" className="home-icon" color="#04B0C3"/>
 						<span>Restaurant ID</span>
 					</div>
 				</NavLink>
 				<NavLink to="/med-id" >
 					<div className="menu-item">
-					<FontAwesomeIcon icon={faHeartPulse} size="xl" className="home-icon" color="#D6183B"/>
+					<FontAwesomeIcon icon={faHeartPulse} size="2xl" className="home-icon" color="#D6183B"/>
 						<span>Medical ID</span>
 					</div>
 				</NavLink>
 
 				<NavLink to='get-help'>
 					<div className="menu-item get-help">
-					<FontAwesomeIcon icon={faPhoneVolume} size="xl" className="home-icon"/>
+					<FontAwesomeIcon icon={faPhoneVolume} size="2xl" className="home-icon"/>
 						<span>Emergency Assistance</span>
 					</div>
 				</NavLink>

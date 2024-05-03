@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
-import IDEntry from "../components/IDEntry";
+import IDEntry, { AllergyIDEntry } from "../components/IDEntry";
 
 const RestaurantID = () => {
 	const [isFlipped, setFlipped] = useState(false);
@@ -28,7 +28,7 @@ const RestaurantID = () => {
 						<div className="flip-card-front">
 							<div>
 								{foodAll.map(item =>
-									<IDEntry name={item} translateTo="spanish" />)}
+									<AllergyIDEntry name={item} translateTo="spanish" />)}
 							</div>
 							<div id="card-button">
 								<button onClick={() => handleFlip()} id="allergy-translate-button">See English</button>
@@ -40,7 +40,7 @@ const RestaurantID = () => {
 						<div className="flip-card-back">
 							<div>
 								{foodAll.map(item =>
-									<IDEntry name={item}/>)}
+									<AllergyIDEntry name={item} />)}
 							</div>
 							<div id="card-button">
 								<button onClick={() => handleFlip()} id="allergy-translate-button">See Translation</button>

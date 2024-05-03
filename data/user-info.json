@@ -15,29 +15,24 @@
   },
   "other-all": {
     "allergies": [
-      "Latex",
-      "Medications"
+      "Bees",
+      "Latex"
     ]
   },
   "medical-conditions": {
     "conditions": [
-      "Autoimmune",
       "Diabetes",
-      "Heart",
-      "Hypertension",
-      "IBS"
+      "Hypertension"
     ]
   },
   "other-health": {
     "info": [
       "EpiPen",
-      "Inhaler",
-      "Insulin",
-      "Service Dog"
+      "Insulin"
     ]
   },
   "medications": {
-    "meds": "Toprol, Antihistamine"
+    "meds": "Atenolol, Zyrtec"
   },
   "personal-info": {
     "name": "John Bon Doevi",

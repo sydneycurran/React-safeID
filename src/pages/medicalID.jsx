@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Button } from "react-native-web";
 import ReactCardFlip from "react-card-flip";
+import IDEntry from "../components/IDEntry";
+import PersonalInfo from "../components/PersonalInfo";
 
 const MedicalID = () => {
 	const [isFlipped, setFlipped] = useState(false);
@@ -9,10 +10,37 @@ const MedicalID = () => {
 		console.log("translate")
 		setFlipped(!isFlipped);
 	};
+
+	const [foodAll, setFoodAll] = useState([])
+	fetch("http://localHost:8000/food")
+		.then(res => res.json())
+		.then(json => setFoodAll(json.allergies))
+
+
+	const [otherAll, setOtherAll] = useState([])
+	fetch("http://localHost:8000/other-all")
+		.then(res => res.json())
+		.then(json => setOtherAll(json.allergies))
+
+	const [otherInf, setOtherInf] = useState([])
+	fetch("http://localHost:8000/other-health")
+		.then(res => res.json())
+		.then(json => setOtherInf(json.info))
+
 	const [medCond, setMedCond] = useState([])
 	fetch("http://localHost:8000/medical-conditions")
 		.then(res => res.json())
 		.then(json => setMedCond(json.conditions))
+
+	const [meds, setMeds] = useState([])
+	fetch("http://localHost:8000/medications")
+		.then(res => res.json())
+		.then(json => setMeds(json.meds))
+
+	const [personalInfo, setPersonalInfo] = useState([])
+	fetch("http://localHost:8000/personal-info")
+		.then(res => res.json())
+		.then(json => setPersonalInfo(json))
 
 	return (
 		<div>
@@ -21,15 +49,62 @@ const MedicalID = () => {
 				<div className="header">
 					<h1>Medical ID</h1>
 				</div>
-				<ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
+				<ReactCardFlip isFlipped={isFlipped} flipDirection="vertical" id="medical">
 					<div className="flip-card">
 						<div id="medical" className="flip-card-front">
-							<div class="entry">
+							<PersonalInfo info={personalInfo} />
 
-								<img class="one" src="imgs/peanut.jpeg" alt="Dairy" />
-								<h1 class="two" >Los lácteos</h1>
-								<img class="entry-info-button" src="imgs/info.png" alt="info button" />
-							</div>
+							{medCond.length > 0 ?
+								<>
+									<div class="headerblock">
+										<h1 class="four" >Medical Conditions</h1>
+									</div>
+									<div>
+										{medCond.map(item =>
+											<IDEntry name={item} translateTo="spanish" />)}
+									</div>
+								</> : <></>
+							}
+
+							{meds.length > 0 ?
+								<>
+									<div class="headerblock">
+										<h1 class="four" >Medications</h1>
+									</div>
+									<div class="entry">
+										<h1 class="two">{meds}</h1>
+										<img class="entry-info-button" src="imgs/left arrow.webp" alt="info button" />
+									</div>
+								</> : <></>
+							}
+
+							{foodAll.length > 0 || otherAll.length > 0 ?
+								<>
+									<div class="headerblock">
+										<h1 class="four" >Allergies</h1>
+									</div>
+									<div>
+										{foodAll.map(item =>
+											<IDEntry name={item} translateTo="spanish" />)}
+										{otherAll.map(item =>
+											<IDEntry name={item} translateTo="spanish" />)}
+									</div>
+								</> : <></>
+							}
+
+
+
+							{otherInf.length > 0 ?
+								<>
+									<div class="headerblock">
+										<h1 class="four" >Supplementary Info</h1>
+									</div>
+									<div>
+										{otherInf.map(item =>
+											<IDEntry name={item} translateTo="spanish" />)}
+									</div>
+								</> : <></>
+							}
 							<div id="card-button">
 								<button onClick={() => handleFlip()} id="translate-button">See English</button>
 							</div>
@@ -38,49 +113,59 @@ const MedicalID = () => {
 					</div>
 					<div className="flip-card" >
 						<div id="medical" className="flip-card-back">
+							<PersonalInfo info={personalInfo} />
 
-							<div class="headerblock">
-								<h1 class="four" >Medical Conditions</h1>
-							</div>
+							{medCond.length > 0 ?
+								<>
+									<div class="headerblock">
+										<h1 class="four" >Medical Conditions</h1>
+									</div>
+									<div>
+										{medCond.map(item =>
+											<IDEntry name={item} />)}
+									</div>
+								</> : <></>
+							}
 
-							<div class="entry">
-								<h1 class="two" >Irritable Bowel Syndrome</h1>
-								<img class="entry-info-button" src="imgs/left arrow.webp" alt="info button" />
-							</div>
+							{meds.length > 0 ?
+								<>
+									<div class="headerblock">
+										<h1 class="four" >Medications</h1>
+									</div>
+									<div class="entry">
+										<h1 class="two">{meds}</h1>
+										<img class="entry-info-button" src="imgs/left arrow.webp" alt="info button" />
+									</div>
+								</> : <></>
+							}
 
-							<div class="entry">
-								<h1 class="two" >Arthritis</h1>
-								<img class="entry-info-button" src="imgs/left arrow.webp" alt="info button" />
-							</div>
+							{foodAll.length > 0 || otherAll.length > 0 ?
+								<>
+									<div class="headerblock">
+										<h1 class="four" >Allergies</h1>
+									</div>
+									<div>
+										{foodAll.map(item =>
+											<IDEntry name={item} />)}
+										{otherAll.map(item =>
+											<IDEntry name={item} />)}
+									</div>
+								</> : <></>
+							}
 
-							<div class="entry">
-								<h1 class="two" >Diabetes</h1>
-								<img class="entry-info-button" src="imgs/left arrow.webp" alt="info button" />
-							</div>
 
-							<div class="headerblock">
-								<h1 class="four" >Allergies</h1>
-							</div>
 
-							<div class="entry">
-								<h1 class="two" >Bee Stings</h1>
-								<img class="entry-info-button" src="imgs/left arrow.webp" alt="info button" />
-							</div>
-
-							<div class="headerblock">
-								<h1 class="four" >Supplementary Information</h1>
-							</div>
-
-							<div class="entry">
-
-								<h1 class="two" >Carries Insulin</h1>
-								<img class="entry-info-button" src="imgs/left arrow.webp" alt="info button" />
-							</div>
-
-							<div class="entry">
-								<h1 class="two" >Service Dog</h1>
-								<img class="entry-info-button" src="imgs/left arrow.webp" alt="info button" />
-							</div>
+							{otherInf.length > 0 ?
+								<>
+									<div class="headerblock">
+										<h1 class="four" >Supplementary Info</h1>
+									</div>
+									<div>
+										{otherInf.map(item =>
+											<IDEntry name={item} />)}
+									</div>
+								</> : <></>
+							}
 
 							<div id="card-button">
 								<button onClick={() => handleFlip()} id="translate-button">See Translation</button>

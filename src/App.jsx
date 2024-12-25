@@ -17,10 +17,12 @@ import FoodAllergies from "./components/EditInfoPages/foodAllergyWrap";
 import OtherAllergies from "./components/EditInfoPages/otherAllergyWrap";
 import MedicalConditions from "./components/EditInfoPages/medCondWrap";
 import OtherHealthInfo from "./components/EditInfoPages/otherHealthWrap";
+import './master-styles.css'
 
 function App() {
 	return (
 		<Router>
+			<div id="bottom-pad"/>
 			<Navbar />
 			<Routes>
 				<Route exact path="/" element={<Home />} />

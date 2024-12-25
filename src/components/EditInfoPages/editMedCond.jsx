@@ -8,9 +8,6 @@ export default function EditMedicalConditions({ cond }) {
         <link rel="stylesheet" href="master-styles.css" />
         <div className="edit-info">
             <div id="info-input" className="checkbox">
-                <h1 className="info-label">
-                    My Medical Conditions
-                </h1>
                 <h3 className="info-label">Medical Conditions</h3>
                 <input id="arth" type="checkbox" defaultValue="Arthritis" defaultChecked={cond.includes("Arthritis")} />
                 <label htmlFor="arth">Arthritis</label>

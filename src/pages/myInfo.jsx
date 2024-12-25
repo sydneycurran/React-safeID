@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import PersonalInfo from "../components/PersonalInfo";
 import { NavLink } from "react-router-dom";
+import { Info } from "../components/IDEntry";
+ 
 
 var x = 0
 
@@ -48,7 +50,7 @@ const MyInfo = () => {
 				<div className="info-section">
 					<h3>Food Allergies</h3>
 					<div className="info-list">
-						{foodAll.map(all => <p>{all}</p>)}
+						{foodAll.map(all => <Info name={all} />)}
 					</div>
 				</div>
 			</NavLink>
@@ -56,7 +58,7 @@ const MyInfo = () => {
 				<div className="info-section">
 					<h3>Other Allergies</h3>
 					<div className="info-list">
-						{otherAll.map(all => <p>{all}</p>)}
+						{otherAll.map(all => <Info name={all} />)}
 					</div>
 				</div>
 			</NavLink>
@@ -64,7 +66,7 @@ const MyInfo = () => {
 				<div className="info-section">
 					<h3>Medical Conditions</h3>
 					<div className="info-list">
-						{medCond.map(all => <p>{all}</p>)}
+						{medCond.map(all => <Info name={all} />)}
 					</div>
 				</div>
 			</NavLink>
@@ -76,7 +78,7 @@ const MyInfo = () => {
 				<div className="info-section">
 					<h3>Other Health Info</h3>
 					<div className="info-list">
-						{otherInf.map(all => <p>{all}</p>)}
+						{otherInf.map(all => <Info name={all} />)}
 					</div>
 				</div>
 			</NavLink>

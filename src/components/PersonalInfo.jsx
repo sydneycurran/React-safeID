@@ -8,7 +8,7 @@ export default function PersonalInfo({ info }) {
 
     return (
         <div >
-            <h2>{name}</h2>
+            <h2 className="info-name">{name}</h2>
             <div className='personal-info'>
                 <p>Date of Birth: {birthday}</p>
                 <p>Height: {height}</p>

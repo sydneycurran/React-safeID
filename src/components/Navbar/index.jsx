@@ -12,15 +12,15 @@ const Navbar = () => {
 			<Nav>
 				<NavMenu>
 					<NavLink to="/my-info" activeStyle>
-					<FontAwesomeIcon icon={faUser} size="3x" className="icon"/>
+					<FontAwesomeIcon icon={faUser} size="2x" className="icon"/>
 						My Info
 					</NavLink>
 					<NavLink to="/" activeStyle>
-						<FontAwesomeIcon icon={faHouse} size="3x" className="icon"/>
+						<FontAwesomeIcon icon={faHouse} size="2x" className="icon"/>
 						Home
 					</NavLink>
 					<NavLink to="/More" activeStyle>
-					<FontAwesomeIcon icon={faEllipsis} size="3x" className="icon"/>
+					<FontAwesomeIcon icon={faEllipsis} size="2x" className="icon"/>
 						More
 					</NavLink>
 				</NavMenu>

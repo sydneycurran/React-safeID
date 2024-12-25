@@ -7,14 +7,7 @@ export default function EditOtherHealthInfo({ inf, meds }) {
         <>
             <link rel="stylesheet" href="master-styles.css" />
             <div className="edit-info">
-                <div className="header">
-                    <h1>My Info</h1>
-                    <p className="user-info">Last ID update: April 3, 2024</p>
-                </div>
                 <div id="info-input" className="checkbox">
-                    <h1 className="info-label" id="name">
-                        Name
-                    </h1>
                     <h3 className="info-label">Other Info</h3>
                     <input id="epipen" type="checkbox" defaultValue="EpiPen" defaultChecked={inf.includes("EpiPen")} />
                     <label htmlFor="epipen">Carries Epi-Pen</label>
@@ -24,6 +17,8 @@ export default function EditOtherHealthInfo({ inf, meds }) {
                     <label htmlFor="insulin">Carries Insulin</label>
                     <input id="dog" type="checkbox" defaultValue="Service Dog" defaultChecked={inf.includes("Service Dog")} />
                     <label htmlFor="dog">Service Dog</label>
+                    <br/>
+                    <br/>
                     <h3 className="info-label">Medications</h3>
                     <input id="meds" type="text" defaultValue={meds} />
                     <br />

@@ -1,14 +1,13 @@
 // Filename - ./components/Navbar.js
 
-//import { FaBars } from "react-icons/fa";
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-	background: #111;
-	height: 85px;
+	background: #1a1a1a;
+	height: 180px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	padding-left: 1vw;
 	margin-left: -5px;
 	z-index: 12;
@@ -22,11 +21,14 @@ export const NavLink = styled(Link)`
 	display: grid;
 	text-decoration: none;
 	padding: 0 1rem;
-	padding-bottom: 5px;
+	padding-bottom: 25px;
+	margin-left: 60px;
+	margin-right: 60px;
+	font-size: 40px;
 	height: 100%;
 	cursor: pointer;
 	&.active {
-		color: red;
+		color: #D6183B;
 	}
 	
 `;
@@ -34,11 +36,11 @@ export const NavLink = styled(Link)`
 
 export const NavMenu = styled.div`
 	display: flex;
-	margin-right: -24px;
 	position: absolute;
 	width: 100px;
 	white-space: nowrap; 
 	position: fixed;
   	bottom: 0;
+	margin-left: -100vw;
 
 `;

@@ -16,6 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "font-awesome": "^4.7.0",
+    "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
     "react-card-flip": "^1.2.2",
     "react-dom": "^18.2.0",
